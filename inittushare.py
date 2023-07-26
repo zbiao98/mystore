@@ -64,7 +64,7 @@ def from_ts_to_mysql(pro, engine, datestr: str):
 def main():
     engine = init_engine("tushare")
     date_list = get_date(engine)
-    pro = init_ts(ts, "a1a821dfab3a1110e4c9f7e99ed4ca4484f00ea3bb76cc5bbb5419f0")
+    pro = init_ts(ts, "")
     for datestr in tqdm.tqdm(date_list):
         datestr = datestr.replace("-", "")
         from_ts_to_mysql(pro, engine, datestr)
